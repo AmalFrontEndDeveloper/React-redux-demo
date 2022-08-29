@@ -6,14 +6,13 @@ import { AppAPI } from '../../../utility/services';
 const tempActionsTypes = actionTypes();
 
 
-const getUserDetailsData = () => async (dispatch: ThunkDispatch<{}, {}, AnyAction>, getSate: any) => {
+const getProjectDetailsData = () => async (dispatch: ThunkDispatch<{}, {}, AnyAction>, getSate: any) => {
     // dispatch({
     //     type: tempActionsTypes.ERROR_USER_DETAILS_DATA,
     //     payload: false
     // })
 
-    return await AppAPI.getUserDetails().then((res: any) => {
-        console.log('res',res);
+    return await AppAPI.getProjectDetails().then((res: any) => {
       dispatch({
         type: tempActionsTypes.GET_USER_DETAILS_DATA,
         payload: res.data
@@ -27,4 +26,4 @@ const getUserDetailsData = () => async (dispatch: ThunkDispatch<{}, {}, AnyActio
 
 }
 
-export { getUserDetailsData }
+export { getProjectDetailsData }

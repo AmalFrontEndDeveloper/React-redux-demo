@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import uGaugeReducer from './reducersCollections/reducer'
+import ProjectAppReducer from './reducersCollections/reducer';
 
 const AppReducers = combineReducers({
-    uGaugeApp: uGaugeReducer
+    ProjectApp: ProjectAppReducer
 })
 
 export type AppState = ReturnType<typeof AppReducers>

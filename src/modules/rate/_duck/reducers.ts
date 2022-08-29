@@ -7,7 +7,6 @@ export const getAllRateReducer = (state: any = [], action: any) =>{
     if (action.type === tempActionsTypes.RATE_GET_ALL) {
         return action.payload;
     }
-    console.log("getAllRateReducer",state);
     return state;
 }
 
